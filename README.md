@@ -15,6 +15,7 @@ Contents of classes:
    * populateData() method is responsible for setting up a recycler view and it's corresponding adapter with the data previously fetched.
    * cancelled async task in onStop() method to avoid memory leak.
 
-layout files:<br />
+Layout files:
+
 1.activity_main  : holds the recycler view .<br />
 2.list_item_view : view of each cell of the recycler view. 
