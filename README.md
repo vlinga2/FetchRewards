@@ -19,3 +19,7 @@ Layout files:
 
 1.activity_main  : holds the recycler view .<br />
 2.list_item_view : view of each cell of the recycler view. 
+
+
+
+emailid: vlinga2@uic.edu
