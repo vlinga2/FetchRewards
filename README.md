@@ -1,13 +1,11 @@
 # FetchRewards
 
 UI:
-
 Grouping by list Id is shown with background color of list item in the recycler view.
 
-Classes:
-
-1.MainActivity
-2.CustomAdapter : Recycklerview's adapter.
+Classes:_
+1.MainActivity_
+2.CustomAdapter : Recycklerview's adapter._
 3.ListItem: This is data type of each list item for the recycler view.
 
 Contents of classes:
