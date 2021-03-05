@@ -8,7 +8,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/ID"
@@ -16,7 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:textAlignment="viewStart"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/listID"
@@ -25,7 +27,8 @@
         android:layout_alignParentRight="true"
         android:layout_below="@id/ID"
         android:textAlignment="viewStart"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:textSize="24sp"/>
 
 
 </RelativeLayout>

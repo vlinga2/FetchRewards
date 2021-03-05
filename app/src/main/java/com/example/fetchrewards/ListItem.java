@@ -12,7 +12,7 @@ public class ListItem {
     }
 
     public String getName() {
-        return name;
+        return name.substring(1,name.length()-1);
     }
 
     public String getListId() {

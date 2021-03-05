@@ -17,18 +17,18 @@ import java.util.Random;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder> {
     private ArrayList<ListItem>  listItems;
     private LayoutInflater mInflater;
-    private ListItemClickListener mClickListener;
     private int[] colors = new int[]{Color.rgb(0,160,160),
             Color.rgb(40,80,160),
             Color.rgb(160,0,160),
             Color.rgb(30,80,160)};
+
 
     public CustomAdapter(@NonNull Context context, ArrayList<ListItem> listItems) {
         this.mInflater = LayoutInflater.from(context);
         this.listItems = listItems;
     }
 
-    public class CustomViewHolder extends RecyclerView.ViewHolder implements RecyclerView.OnClickListener{
+    public class CustomViewHolder extends RecyclerView.ViewHolder {
         TextView name;
         TextView listId;
         TextView id;
@@ -40,13 +40,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
             listId = itemView.findViewById(R.id.listID);
             id = itemView.findViewById(R.id.ID);
             view = itemView;
-            itemView.setOnClickListener(this);
         }
 
-        @Override
-        public void onClick(View v) {
-            if(mClickListener != null) mClickListener.onItemClick(v,getAdapterPosition());
-        }
     }
 
     @NonNull
@@ -63,8 +58,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         TextView id = holder.id;
 
         name.setText(listItems.get(position).getName());
-        listId.setText(listItems.get(position).getListId());
-        id.setText(listItems.get(position).getId());
+        listId.setText("List Id :"+listItems.get(position).getListId());
+        id.setText("Id :"+listItems.get(position).getId());
         holder.view.setBackgroundColor(colors[Integer.parseInt(listItems.get(position).getListId())-1]);
     }
 
@@ -74,11 +69,4 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomView
         return listItems.size();
     }
 
-    void setClickListener(ListItemClickListener itemClickListener) {
-        this.mClickListener = itemClickListener;
-    }
-
-    interface ListItemClickListener{
-        void onItemClick(View view, int position);
-    }
 }
